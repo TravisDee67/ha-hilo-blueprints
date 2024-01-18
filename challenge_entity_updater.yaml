@@ -26,6 +26,9 @@ trigger:
     at: "04:00"
 
   - platform: time
+    at: "04:30"
+
+  - platform: time
     at: "05:00"
 
   - platform: time
@@ -39,6 +42,9 @@ trigger:
 
   - platform: time
     at: "15:00"
+
+  - platform: time
+    at: "15:30"    
 
   - platform: time
     at: "16:00"
@@ -127,10 +133,10 @@ action:
           - condition: or
             conditions:
               - condition: time
-                after: "05:00:00"
+                after: "04:30:00"
                 before: "06:00:00"
               - condition: time
-                after: "16:00:00"
+                after: "15:30:00"
                 before: "17:00:00"
         sequence:
           - service: input_text.set_value
